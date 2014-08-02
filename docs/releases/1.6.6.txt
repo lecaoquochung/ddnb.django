@@ -1,0 +1,35 @@
+==========================
+Django 1.6.6 release notes
+==========================
+
+*Under development*
+
+Django 1.6.6 fixes several bugs in 1.6.5.
+
+Bugfixes
+========
+
+* Corrected email and URL validation to reject a trailing dash
+  (`#22579 <http://code.djangoproject.com/ticket/22579>`_).
+
+* Prevented indexes on PostgreSQL virtual fields
+  (`#22514 <http://code.djangoproject.com/ticket/22514>`_).
+
+* Prevented edge case where values of FK fields could be initialized with a
+  wrong value when an inline model formset is created for a relationship
+  defined to point to a field other than the PK
+  (`#13794 <https://code.djangoproject.com/ticket/13794>`_).
+
+* Restored ``pre_delete``  signals for ``GenericRelation`` cascade deletion
+  (`#22998 <https://code.djangoproject.com/ticket/22998>`_).
+
+* Fixed transaction handling when specifying non-default database in
+  ``createcachetable`` and ``flush``
+  (`#23089 <https://code.djangoproject.com/ticket/23089>`_).
+
+* Fixed the "ORA-01843: not a valid month" errors when using Unicode
+  with older versions of Oracle server
+  (`#20292 <https://code.djangoproject.com/ticket/20292>`_).
+
+* Restored bug fix for sending unicode email with Python 2.6.5 and below
+  (`#19107 <https://code.djangoproject.com/ticket/19107>`_).
